@@ -18,21 +18,27 @@ DNS cache poisoning is a vulnerability used by the attackers to replace the DNS 
 
 1. Installing virtual box
 
-     . visit https://www.virtualbox.org/wiki/Downloads and download according to the operating system
+     . visit https://www.virtualbox.org/wiki/Downloads to download and install according to the operating system
         
         
 2. Download and install kali machine 64 bit on virtual box using the link provided
 
      . https://kali.download/virtual-images/kali-2022.1/kali-linux-2022.1-virtualbox-amd64.ova
-       follows instruction in the site to install kali machine on virtual box
-       https://itsfoss.com/install-kali-linux-virtualbox/
-        
-3. Installing ettercap on kali
+     
+      follows instruction in the site to install kali machine on virtual box
+      https://itsfoss.com/install-kali-linux-virtualbox/
+      
+      
+3. Download and install windows 10 machine on virtual box using the link provided
+
+      https://www.groovypost.com/howto/windows-10-install-virtualbox/
+                    
+4. Installing ettercap on kali
      use below command to install Ettercap application
      
         sudo apt-get install ettercap
         
-4. installing apache server
+5. installing apache server
      use following command to install apache server on kali
         
         sudo apt-get install apache2
