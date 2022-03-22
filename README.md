@@ -20,6 +20,7 @@ DNS cache poisoning is a vulnerability used by the attackers to replace the DNS 
 
      . visit https://www.virtualbox.org/wiki/Downloads to download and install according to the operating system
         
+              
         
 2. Download and install kali machine 64 bit on virtual box using the link provided
 
@@ -29,26 +30,35 @@ DNS cache poisoning is a vulnerability used by the attackers to replace the DNS 
       https://itsfoss.com/install-kali-linux-virtualbox/
       
       
+      
 3. Download and install windows 10 machine on virtual box
 
       follow instructions provided in the link to download and set up windows 10 machine on virtual box
 
       https://www.groovypost.com/howto/windows-10-install-virtualbox/
                     
+                    
+                    
 4. Installing ettercap on kali
      use below command to install Ettercap application
      
         sudo apt-get install ettercap
-        
+       
+       
+       
 5. installing apache server
      use following command to install apache server on kali
         
         sudo apt-get install apache2
-                
+         
+         
+         
 5. install Iptable
      use following command to install iptables on kali
      
         sudo apt-get install iptables
+       
+       
        
 # Getting Ready
 
@@ -57,7 +67,9 @@ DNS cache poisoning is a vulnerability used by the attackers to replace the DNS 
       
 ##### Network settings
 
+
    Go to Network settings on both the machines and set the adapter to bridged adapter to get the two machines on same network with internet access
+                 
                  
 ##### Edit Ettercap configuration file
                  
@@ -67,7 +79,9 @@ We now need to edit the Ettercap configuration file since it is our application 
 Let's navigate to /etc/ettercap/etter.conf and open the file with a text editor like leafpad and edit the file. 
 We can use following command for that.
 
+
         leafpad /etc/ettercap/etter.conf
+        
 
 So now we want to edit the uid and gid values at the top to make them say 0 so go ahead and do that.
 
@@ -81,6 +95,8 @@ So now we want to edit the uid and gid values at the top to make them say 0 so g
         [mitm]
         arp_storm_delay = 10          # milliseconds
         arp_poison_smart = 0          # boolean
+
+
 
 Now scroll down until you find the heading that says Linux and under that remove both the # signs for the sections below where it says "Linux".
 
@@ -97,9 +113,13 @@ Now scroll down until you find the heading that says Linux and under that remove
            redir6_command_on = "ip6tables -t nat -A PREROUTING -i %iface -p tcp -d %destination --dport %port -j REDIRECT --to-port %rport"
            redir6_command_off = "ip6tables -t nat -D PREROUTING -i %iface -p tcp -d %destination --dport %port -j REDIRECT --to-port %rport"
 
+
+
 ##### Edit Ettercap.dns file
 
+
   Edit the domain name to spoof and  edit the IP address to attackers IP address and save the file
+
 
         #                                                                          #
         # Sample hosts file for dns_spoof plugin                                   #
@@ -112,23 +132,38 @@ Now scroll down until you find the heading that says Linux and under that remove
         #   *.foo.com          A 168.44.55.66 [optional TTL]                       #
         #      
         
+        
+        
 ##### Run ettercap application
+
 
    use folowing command to run Ettercap application from terminal
    
         ettercap -G
         
  1. choose primary interface and click accept on top right corner
- 2. click on threen dots on top right to select options
+
+
+ 22. click on threen dots on top right to select options
         select Hosts --> Scan for Hosts     
         this will scan for the available devices connected to the network and save it to Hosts List
+        
+        
  3. click on threen dots on top right to select options
         select Hosts --> Hosts List
         it will list the hosts in network found on previous scanning step
+        
+        
  4. Select the victim's IP address and add it to target1 by clicking on "Add to Target1"
+
+
  5. select the DNS IP address and add it to target2 by clicking on "Add to Target2"
+
+
  6. now Click on Ettercap Menu and select Plugins --> Manage Plugins
         select dns_spoof. now right click and activate plugin
+        
+        
  7. click on man in the MITM Menu on top right corner near Ettercap Menu and select ARP Poisoning. click OK 
 
 
