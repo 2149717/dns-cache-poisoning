@@ -1,5 +1,6 @@
 # dns-cache-poisoning
 
+DNS cache poisoning is a vulnerability used by the attackers to replace the DNS response with forged DNS response that direct the request to attacker’s website. Usually this is used for pharming user are unknowing made to download malicious code or provide credentials which is then an accessed by attackers. The DNS server doesn’t verify the cache. Therefore, the forged response remains in the DNS until the TTL is expired. The DNS cache poisoning will not affect the real site corresponding to the IP address but the response from that DNS will lead user to rogue website
 
 
 ## REQUIREMENTS
