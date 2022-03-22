@@ -29,7 +29,9 @@ DNS cache poisoning is a vulnerability used by the attackers to replace the DNS 
       https://itsfoss.com/install-kali-linux-virtualbox/
       
       
-3. Download and install windows 10 machine on virtual box using the link provided
+3. Download and install windows 10 machine on virtual box
+
+      follow instructions provided in the link to download and set up windows 10 machine on virtual box
 
       https://www.groovypost.com/howto/windows-10-install-virtualbox/
                     
@@ -53,6 +55,9 @@ DNS cache poisoning is a vulnerability used by the attackers to replace the DNS 
 
 ### Configuring
       
+##### Network settings
+
+   Go to Network settings on both the machines and set the adapter to bridged adapter to get the two machines on same network with internet access
                  
 ##### Edit Ettercap configuration file
                  
