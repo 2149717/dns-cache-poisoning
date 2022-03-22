@@ -40,6 +40,7 @@ DNS cache poisoning is a vulnerability used by the attackers to replace the DNS 
                     
                     
 4. Installing ettercap on kali
+
      use below command to install Ettercap application
      
         sudo apt-get install ettercap
@@ -47,13 +48,15 @@ DNS cache poisoning is a vulnerability used by the attackers to replace the DNS 
        
        
 5. installing apache server
+
      use following command to install apache server on kali
         
         sudo apt-get install apache2
          
          
          
-5. install Iptable
+6. install Iptable
+
      use following command to install iptables on kali
      
         sudo apt-get install iptables
