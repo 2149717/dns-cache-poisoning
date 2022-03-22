@@ -6,7 +6,9 @@
 
 1. virtual box
 2. Two virtual machines 
-        . we are using kali machine for attacking and windows machine as victim
+
+      . we are using kali machine for attacking and windows machine as victim
+      
 3. Ettercap Application
 4. Apache Server
 5. IpTables
