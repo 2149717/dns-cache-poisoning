@@ -98,4 +98,29 @@ Now scroll down until you find the heading that says Linux and under that remove
         #   *.foo.com          A 168.44.55.66 [optional TTL]                       #
         #      
         
- 
+##### Run ettercap application
+
+   use folowing command to run Ettercap application from terminal
+   
+        ettercap -G
+        
+ 1. choose primary interface and click accept on top right corner
+ 2. click on threen dots on top right to select options
+        select Hosts --> Scan for Hosts     
+        this will scan for the available devices connected to the network and save it to Hosts List
+ 3. click on threen dots on top right to select options
+        select Hosts --> Hosts List
+        it will list the hosts in network found on previous scanning step
+ 4. Select the victim's IP address and add it to target1 by clicking on "Add to Target1"
+ 5. select the DNS IP address and add it to target2 by clicking on "Add to Target2"
+ 6. now Click on Ettercap Menu and select Plugins --> Manage Plugins
+        select dns_spoof. now right click and activate plugin
+ 7. click on man in the MITM Menu on top right corner near Ettercap Menu and select ARP Poisoning. click OK 
+
+
+#### testing
+
+All set now try accessng the website from victim's Machine.
+it'll be redirected to the ip address specified in the etter.dns file
+
+we can use the chk_poison to validate the poisoning
