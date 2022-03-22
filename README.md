@@ -34,6 +34,8 @@
         
         sudo apt-get install apache2
         
+
+        
 5. install Iptable
 
         sudo apt-get install iptables
@@ -50,4 +52,33 @@ We now need to edit the Ettercap configuration file since it is our application 
 Let's navigate to /etc/ettercap/etter.conf and open the file with a text editor like leafpad and edit the file. 
 We can use following command for that.
 
-leafpad /etc/ettercap/etter.conf
+        leafpad /etc/ettercap/etter.conf
+
+So now we want to edit the uid and gid values at the top to make them say 0 so go ahead and do that.
+
+
+       ############################################################################
+
+        [privs]
+        ec_uid = 0               # nobody is the default
+        ec_gid = 0               # nobody is the default
+
+        [mitm]
+        arp_storm_delay = 10          # milliseconds
+        arp_poison_smart = 0          # boolean
+
+Now scroll down until you find the heading that says Linux and under that remove both the # signs for the sections below where it says "Linux".
+
+
+
+        #---------------
+        #     Linux 
+        #---------------
+
+           redir_command_on = "iptables -t nat -A PREROUTING -i %iface -p tcp -d %destination --dport %port -j REDIRECT --to-port %rport"
+           redir_command_off = "iptables -t nat -D PREROUTING -i %iface -p tcp -d %destination --dport %port -j REDIRECT --to-port %rport"
+
+        # pendant for IPv6 - Note that you need iptables v1.4.16 or newer to use IPv6 redirect
+           redir6_command_on = "ip6tables -t nat -A PREROUTING -i %iface -p tcp -d %destination --dport %port -j REDIRECT --to-port %rport"
+           redir6_command_off = "ip6tables -t nat -D PREROUTING -i %iface -p tcp -d %destination --dport %port -j REDIRECT --to-port %rport"
+
