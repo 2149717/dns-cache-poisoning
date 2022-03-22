@@ -19,8 +19,9 @@
         
         
 2. Download and install kali machine 64 bit on virtual box using the link provided
-        . https://kali.download/virtual-images/kali-2022.1/kali-linux-2022.1-virtualbox-amd64.ova
-        follows instruction in the site to install kali machine on virtual box
-        https://itsfoss.com/install-kali-linux-virtualbox/
+
+     . https://kali.download/virtual-images/kali-2022.1/kali-linux-2022.1-virtualbox-amd64.ova
+       follows instruction in the site to install kali machine on virtual box
+       https://itsfoss.com/install-kali-linux-virtualbox/
         
         
