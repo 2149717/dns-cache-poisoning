@@ -134,7 +134,7 @@ Now scroll down until you find the heading that says Linux and under that remove
 
 #### testing
 
-All set now try accessng the website from victim's Machine.
+All set now try accessing the website from victim's Machine.
 it'll be redirected to the ip address specified in the etter.dns file
 
 we can use the chk_poison to validate the poisoning
