@@ -15,7 +15,7 @@
 
 1. Installing virtual box
 
-        . visit https://www.virtualbox.org/wiki/Downloads and download according to the operating system
+     . visit https://www.virtualbox.org/wiki/Downloads and download according to the operating system
         
         
 2. Download and install kali machine 64 bit on virtual box using the link provided
