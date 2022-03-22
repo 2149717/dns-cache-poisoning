@@ -44,4 +44,10 @@
 # Getting Ready
 
 
-clone website
+### Configuring
+
+We now need to edit the Ettercap configuration file since it is our application of choice for today.
+Let's navigate to /etc/ettercap/etter.conf and open the file with a text editor like leafpad and edit the file. 
+We can use following command for that.
+
+leafpad /etc/ettercap/etter.conf
