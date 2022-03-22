@@ -7,9 +7,9 @@
 1. virtual box
 2. Two virtual machines 
         . we are using kali machine for attacking and windows machine as victim
-2. Ettercap Application
-3. Apache Server
-4. IpTables
+3. Ettercap Application
+4. Apache Server
+5. IpTables
 
 ## How to install requirements
 
@@ -24,4 +24,19 @@
        follows instruction in the site to install kali machine on virtual box
        https://itsfoss.com/install-kali-linux-virtualbox/
         
+3. Installing ettercap on kali
+     use below command to install Ettercap application
+     
+        sudo apt-get install ettercap
+        
+4. installing apache server
+        use following command to install apache server on kali
+        
+        sudo apt-get install apache2
+        
+5. install Iptable
+
+        sudo apt-get install iptables
+        
+
         
