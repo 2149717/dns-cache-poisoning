@@ -147,12 +147,12 @@ Now scroll down until you find the heading that says Linux and under that remove
  1. choose primary interface and click accept on top right corner
 
 
- 22. click on threen dots on top right to select options
+ 2. click on three dots on top right to select options
         select Hosts --> Scan for Hosts     
         this will scan for the available devices connected to the network and save it to Hosts List
         
         
- 3. click on threen dots on top right to select options
+ 3. click on three dots on top right to select options
         select Hosts --> Hosts List
         it will list the hosts in network found on previous scanning step
         
